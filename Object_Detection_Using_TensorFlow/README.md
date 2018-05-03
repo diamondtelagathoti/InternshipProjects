@@ -4,24 +4,33 @@ This repository contains the works which I have done using TensorFlow Object Det
 
 ### Installation ###
 
+<<<<<<< HEAD
 System: Ubuntu  
 
 ``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependecies:  
 
 ```
 For python 2.7:
+=======
+System: ``Ubuntu``  
+``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependecies:  
+For python 2.7:  
+>>>>>>> 5af033b65bc4ac8516676ba4241a87f61b16c0c4
 	``sudo apt-get -y install python-pip python-dev build-essential``  
 	``sudo pip install --upgrade pip``  
-For python 3:
+For python 3:  
 	``sudo apt-get -y install python3-pip``  
-	``pip3 -version`` (For checking the version of pip3)  
-For python 2.7:  
+	``pip3 -version (For checking the version of pip3)``  
+For python 2.7:    
 	``sudo pip install -r dependencies.txt``  
-
 For python 3:  
 	``sudo pip3 install -r dependencies.txt``  
+<<<<<<< HEAD
 * Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
 ```
+=======
+	* Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
+>>>>>>> 5af033b65bc4ac8516676ba4241a87f61b16c0c4
 After installing the tensorflow 1.5.0, and all the dependencies, you need to run the following commands,
 	``sudo apt-get install python3-tk`` (For installing tkinter library)  
 
@@ -30,7 +39,6 @@ Protobuf Compilation:
 The Tensorflow Object Detection API uses Protobufs to configure model and training parameters.  
 Before the framework can be used, the Protobuf libraries must be compiled.  
 This should be done by running the following cmd from the tensorflow/models/research/ directory:  
-
 ``protoc object_detection/protos/*.proto --python_out=.``  
 Basically the above cmd, creates .ipynb file for every .proto file in the protos directory in object detection folder  
 ``tensorflow/models/research/object detection/protos`` 
@@ -40,8 +48,12 @@ When running locally, the ``tensorflow/models/research/`` and slim directories s
 This can be done by running the following from ``tensorflow/models/research/:``  
 From ``tensorflow/models/research/``  
 ``export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim``  
+<<<<<<< HEAD
 
 Note: This command needs to run from every new terminal you start.  
+=======
+* Note: This command needs to run from every new terminal you start.  
+>>>>>>> 5af033b65bc4ac8516676ba4241a87f61b16c0c4
 If you wish to avoid running this manually, you can add the above as a new line to the end of your ~/.bashrc file.  
 E.g. ``sudo nano ~/.bashrc`` and then add the above command at the end of the file.  
 
