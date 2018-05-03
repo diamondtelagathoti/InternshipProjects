@@ -2,7 +2,7 @@
 
 This repository contains the works which I have done using TensorFlow Object Detection API. Before running the code, you need to first install tensorflow and all its dependecies.  
 
-### Installation ###
+### Installation: ###
 
 ```System: Ubuntu 16.04 LTS or later```  
 
@@ -24,7 +24,7 @@ Note: dependencies.txt file contains all the dependencies in order to run tensor
 After installing the tensorflow 1.5.0, and all the dependencies, you need to run the following commands,
 	``sudo apt-get install python3-tk (For installing tkinter library)``  
 
-In python interpreter, run the following cmds:
+In python interpreter, run the following commands to check whether tensorFlow is installed sucessfully:  
 ```
 import tensorflow as tf
 print(tf.__version__) #print the version of tensorflow installed in your system.
@@ -60,6 +60,6 @@ Test whether you have correctly installed the Tensorflow Object Detection API by
 If the above cmd executes sucessfully, means you have installed TensorFlow Object Detection API sucessfully.  
 
 I am using ``OpenCV`` for implementing the object detection in real-time, you need to install ``OpenCV``.  
-Refer the link for installing [OpenCV] (https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)  
+Refer the link for installing [OpenCV](https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)  
 Now, you can run the code sucessfully.  
 
