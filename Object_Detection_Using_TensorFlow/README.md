@@ -26,18 +26,16 @@ Protobuf Compilation:
 The Tensorflow Object Detection API uses Protobufs to configure model and training parameters.  
 Before the framework can be used, the Protobuf libraries must be compiled.  
 This should be done by running the following cmd from the tensorflow/models/research/ directory:  
-
 ``protoc object_detection/protos/*.proto --python_out=.``  
-Basically the above cmd, creates .ipynb file for every .proto file in the protos directory in object detection folder
+Basically the above cmd, creates .ipynb file for every .proto file in the protos directory in object detection folder  
 ``tensorflow/models/research/object detection/protos`` 
 
-Adding libraries to ``PYTHONPATH``
-When running locally, the ``tensorflow/models/research/`` and slim directories should be appended to ``PYTHONPATH.`` 
+Adding libraries to ``PYTHONPATH``  
+When running locally, the ``tensorflow/models/research/`` and slim directories should be appended to ``PYTHONPATH.``  
 This can be done by running the following from ``tensorflow/models/research/:``  
-From ``tensorflow/models/research/``
-``export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim``
-
-Note: This command needs to run from every new terminal you start.  
+From ``tensorflow/models/research/``  
+``export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim``  
+* Note: This command needs to run from every new terminal you start.  
 If you wish to avoid running this manually, you can add the above as a new line to the end of your ~/.bashrc file.  
 E.g. ``sudo nano ~/.bashrc`` and then add the above command at the end of the file.  
 
