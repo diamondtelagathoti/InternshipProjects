@@ -5,20 +5,19 @@ Before running the code, you need to first install tensorflow and all its depend
 
 #### Installation ####
 
-System: Ubuntu  
+System: ``Ubuntu``  
 ``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependecies:  
-For python 2.7:
+For python 2.7:  
 	``sudo apt-get -y install python-pip python-dev build-essential``  
 	``sudo pip install --upgrade pip``  
-For python 3:
+For python 3:  
 	``sudo apt-get -y install python3-pip``  
-	``pip3 -version`` (For checking the version of pip3)  
-For python 2.7:  
+	``pip3 -version (For checking the version of pip3)``  
+For python 2.7:    
 	``sudo pip install -r dependencies.txt``  
-
 For python 3:  
 	``sudo pip3 install -r dependencies.txt``  
-	*Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
+	* Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
 After installing the tensorflow 1.5.0, and all the dependencies, you need to run the following commands,
 	``sudo apt-get install python3-tk`` (For installing tkinter library)  
 
