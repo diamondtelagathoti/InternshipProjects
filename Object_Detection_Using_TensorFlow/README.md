@@ -6,7 +6,7 @@ This repository contains the works which I have done using TensorFlow Object Det
 
 ```System: Ubuntu 16.04 LTS or later```  
 
-``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependecies:  
+``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependencies:  
 
 ```
 For python 2.7:
