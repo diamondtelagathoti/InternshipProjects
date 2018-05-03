@@ -1,4 +1,4 @@
-# InternshipProjects  
+# Internship Projects  
 The repository contains logs of all the projects, which I have done during my Internships.  
 
 #### Index: ####
