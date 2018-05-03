@@ -4,29 +4,22 @@ This repository contains the works which I have done using TensorFlow Object Det
 
 ### Installation ###
 
-<<<<<<< HEAD
-System: Ubuntu  
+```System: Ubuntu 16.04 LTS or later```  
 
 ``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependecies:  
 
 ```
 For python 2.7:
-=======
-System: ``Ubuntu``  
-``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependecies:  
+	sudo apt-get -y install python-pip python-dev build-essential  
+	sudo pip install --upgrade pip  
+For python 3:  
+	sudo apt-get -y install python3-pip  
+	pip3 -version (For checking the version of pip3)  
 For python 2.7:  
->>>>>>> 5af033b65bc4ac8516676ba4241a87f61b16c0c4
-	``sudo apt-get -y install python-pip python-dev build-essential``  
-	``sudo pip install --upgrade pip``  
+	sudo pip install -r dependencies.txt  
 For python 3:  
-	``sudo apt-get -y install python3-pip``  
-	``pip3 -version (For checking the version of pip3)``  
-For python 2.7:    
-	``sudo pip install -r dependencies.txt``  
-For python 3:  
-	``sudo pip3 install -r dependencies.txt``  
-<<<<<<< HEAD
-* Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
+	sudo pip3 install -r dependencies.txt  
+* Note: dependencies.txt file contains all the dependencies in order to run tensorflow on your system.  
 ```
 =======
 	* Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
