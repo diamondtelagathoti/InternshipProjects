@@ -1,12 +1,14 @@
 # Object Detection Using TensorFlow  
 
-This repository contains the works which I have done using TensorFlow Object Detection API.  
-Before running the code, you need to first install tensorflow and all its dependecies.  
+This repository contains the works which I have done using TensorFlow Object Detection API. Before running the code, you need to first install tensorflow and all its dependecies.  
 
-#### Installation ####
+### Installation ###
 
 System: Ubuntu  
+
 ``pip`` is a python package manager used for installing all the modules to your system, if ``pip`` is not installed, then run the following command before insalling dependecies:  
+
+```
 For python 2.7:
 	``sudo apt-get -y install python-pip python-dev build-essential``  
 	``sudo pip install --upgrade pip``  
@@ -18,7 +20,8 @@ For python 2.7:
 
 For python 3:  
 	``sudo pip3 install -r dependencies.txt``  
-	*Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
+* Note: ``dependencies.txt`` file contains all the dependencies in order to run tensorflow on your system.  
+```
 After installing the tensorflow 1.5.0, and all the dependencies, you need to run the following commands,
 	``sudo apt-get install python3-tk`` (For installing tkinter library)  
 
@@ -29,14 +32,14 @@ Before the framework can be used, the Protobuf libraries must be compiled.
 This should be done by running the following cmd from the tensorflow/models/research/ directory:  
 
 ``protoc object_detection/protos/*.proto --python_out=.``  
-Basically the above cmd, creates .ipynb file for every .proto file in the protos directory in object detection folder
+Basically the above cmd, creates .ipynb file for every .proto file in the protos directory in object detection folder  
 ``tensorflow/models/research/object detection/protos`` 
 
-Adding libraries to ``PYTHONPATH``
-When running locally, the ``tensorflow/models/research/`` and slim directories should be appended to ``PYTHONPATH.`` 
+Adding libraries to ``PYTHONPATH``  
+When running locally, the ``tensorflow/models/research/`` and slim directories should be appended to ``PYTHONPATH.``  
 This can be done by running the following from ``tensorflow/models/research/:``  
-From ``tensorflow/models/research/``
-``export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim``
+From ``tensorflow/models/research/``  
+``export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim``  
 
 Note: This command needs to run from every new terminal you start.  
 If you wish to avoid running this manually, you can add the above as a new line to the end of your ~/.bashrc file.  
@@ -51,5 +54,5 @@ If the above cmd executes sucessfully, means you have installed TensorFlow Objec
 
 As I am using ``OpenCV`` for implementing the object detection in real-time, you need to install ``OpenCV``.  
 Refer the link for installing ``OpenCV``: [OpenCV Installation] (https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)  
-Now, you can run the code sucessfully.   
+Now, you can run the code sucessfully.  
 
