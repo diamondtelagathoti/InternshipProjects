@@ -1,5 +1,4 @@
 # Object Detection Using TensorFlow  
-- - - -
 This repository contains the works which I have done using TensorFlow Object Detection API. Before running the code, you need to first install tensorflow and all its dependecies.  
 
 ### Installation: ###
@@ -24,7 +23,7 @@ For python 2.7:
 For python 3:  
 	sudo pip3 install -r dependencies.txt  
 ```
-Note: dependencies.txt file contains all the dependencies/packages in order to run TensorFlow.  
+Note: ```dependencies.txt``` file contains all the dependencies/packages in order to run TensorFlow.  
 * After installing the tensorflow 1.5.0, and all the dependencies, run the following command,  
 	``sudo apt-get install python3-tk (For installing tkinter library)``  
 
@@ -36,7 +35,7 @@ print(tf.__version__) #print the version of tensorflow installed in your system.
 After sucessfully installing tensorFlow, issue the following commmands to install TensorFlow Object Detection API  
 
 For more information on installtion of TensorFlow, refer the link:  
-[TensorFlow Installation](https://www.tensorflow.org/install/)
+[TensorFlow Installation](https://www.tensorflow.org/install/)  
 [TensorFlow Object Detection Installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
 
 #### OpenCV Installation: ####
