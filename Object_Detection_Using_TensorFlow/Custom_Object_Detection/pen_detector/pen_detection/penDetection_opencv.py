@@ -1,5 +1,4 @@
 # IMPORTS
-
 import numpy as np
 import os
 import six.moves.urllib as urllib
@@ -7,7 +6,6 @@ import sys
 import tarfile
 import tensorflow as tf
 import zipfile
-
 from collections import defaultdict
 from io import StringIO
 from matplotlib import pyplot as plt ### CWH
@@ -18,7 +16,7 @@ print('OpenCV Version: %s' % (cv.__version__))
 print('Tensorflow Version: %s' % (tf.__version__))
 print("Numpy Version: %s" % (np.__version__))
 
-cap = cv.VideoCapture(0) # Capturing the video feed from my WebCam, which is assigned an index value of 0
+cam = cv.VideoCapture(0) # Capturing the video feed from my WebCam, which is assigned an index value of 0
 # scaling_factor = 0.5 # Image size scaling factor
 
 # This is needed since the notebook is stored in the object_detection folder.
@@ -30,31 +28,14 @@ from object_detection.utils import label_map_util    ### CWH: Add object_detecti
 from object_detection.utils import visualization_utils as vis_util ### CWH: used for visualization
 
 # Model Preparation
-
-# What model to download.
 MODEL_NAME = 'pen_detection_model_v1.0'
-# MODEL_FILE = MODEL_NAME + '.tar.gz'
-# DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('training', 'pen_label_map.pbtxt') ### CWH: Add object_detection path
-
+PATH_TO_LABELS = os.path.join('training', 'pen_label_map.pbtxt')
 NUM_CLASSES = 1
-
-# The below code is downloading the model and extracting it
-'''
-# Download Model
-opener = urllib.request.URLopener()
-opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
-tar_file = tarfile.open(MODEL_FILE)
-for file in tar_file.getmembers():
-  file_name = os.path.basename(file.name)
-  if 'frozen_inference_graph.pb' in file_name:
-    tar_file.extract(file, os.getcwd())
-'''
 
 # Load a (frozen) Tensorflow model into memory.
 detection_graph = tf.Graph()
@@ -70,32 +51,13 @@ label_map = label_map_util.load_labelmap(PATH_TO_LABELS)
 categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=NUM_CLASSES, use_display_name=True)
 category_index = label_map_util.create_category_index(categories)
 
-'''
-# Helper code
-def load_image_into_numpy_array(image):
-  (im_width, im_height) = image.size
-  return np.array(image.getdata()).reshape(
-      (im_height, im_width, 3)).astype(np.uint8)
-'''
-# Detection
-# For the sake of simplicity we will use only 2 images:
-# image1.jpg
-# image2.jpg
-# If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-'''
-PATH_TO_TEST_IMAGES_DIR = 'test_images' #cwh
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 17) ]
-'''
-# Size, in inches, of the output images.
-# IMAGE_SIZE = (12, 8)
-
 with detection_graph.as_default():
     with tf.Session(graph=detection_graph) as sess:
-        while (cap.isOpened()): #isOpen() is simply checking whether the camera is open or not,if not it return false, otherwise true
+        while (cam.isOpened()): #isOpen() is simply checking whether the camera is open or not,if not it return false, otherwise true
    	        # Defined two variables ret,frame, ret->boolean,checking whether any value is returned or not from 
    	        # image_np variable stores each frame which is returned from the func, if no frame is returned,
             # error will not be generated rather it will store None
-            ret,image_np=cap.read()
+            ret,image_np=cam.read()
             if ret == True:
                 # Definite input and output Tensors for detection_graph
                 image_np_expanded = np.expand_dims(image_np, axis=0)
