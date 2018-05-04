@@ -1,9 +1,16 @@
 # Object Detection Using TensorFlow  
 This repository contains the works which I have done using TensorFlow Object Detection API. Before running the code, you need to first install tensorflow and all its dependecies.  
 
+### System Requirements ###
+``` 
+   * Ubuntu 16.04 LTS or later  
+   * Dependencies Installed  
+```
+Note: My system doesn't have GPU.  
+Below installation procedure is for CPU which has no GPU.  
+For installation of TensorFlow on GPU, refer [TensorFlow GPU Installation](https://www.tensorflow.org/install/)  
+
 ### Installation: ###
-- - - -
-```System: Ubuntu 16.04 LTS or later```  
 
 ``pip`` is a python package manager used for installing all the modules, if ``pip`` is not installed, then run the following command before insalling dependencies:  
 
@@ -33,12 +40,11 @@ import tensorflow as tf
 print(tf.__version__) #print the version of TensorFlow installed in your system.
 ```
 
-For more information on installtion of TensorFlow, refer the below link:  
+For detailed information on installtion of TensorFlow, refer the below link:  
 [TensorFlow Installation](https://www.tensorflow.org/install/)  
 [TensorFlow Object Detection API Installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
 
 #### OpenCV Installation: ####
-- - - -
 * I am using ``OpenCV`` for implementing the object detection in real-time, you need to install ``OpenCV`` also.  
 * Refer the below link for installation  
 [OpenCV Installation](https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)  
