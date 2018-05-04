@@ -8,6 +8,7 @@ This repository contains the works which I have done using TensorFlow Object Det
 
 ``pip`` is a python package manager used for installing all the modules, if ``pip`` is not installed, then run the following command before insalling dependencies:  
 
+ * Installing Pip  
 ```
 For python 2.7:
 	sudo apt-get -y install python-pip python-dev build-essential  
@@ -15,16 +16,20 @@ For python 2.7:
 For python 3:  
 	sudo apt-get -y install python3-pip  
 	pip3 -version (For checking the version of pip3)  
+```
+Installing Dependencies  
+```
 For python 2.7:  
 	sudo pip install -r dependencies.txt  
 For python 3:  
 	sudo pip3 install -r dependencies.txt  
 Note: dependencies.txt file contains all the dependencies in order to run tensorflow on your system.  
 ```
-After installing the tensorflow 1.5.0, and all the dependencies, you need to run the following commands,
+
+* After installing the tensorflow 1.5.0, and all the dependencies, run the following command,
 	``sudo apt-get install python3-tk (For installing tkinter library)``  
 
-In python interpreter, run the following commands to check whether tensorFlow is installed sucessfully:  
+* In python interpreter, run the following commands to check whether tensorFlow is installed sucessfully:  
 ```
 import tensorflow as tf
 print(tf.__version__) #print the version of tensorflow installed in your system.
@@ -32,17 +37,16 @@ print(tf.__version__) #print the version of tensorflow installed in your system.
 After sucessfully installing tensorFlow, issue the following cmds to install tensorFlow Object Detection API  
 
 #### Protobuf Compilation: ####  
-The Tensorflow Object Detection API uses Protobufs to configure model and training parameters.Before the framework can be used, the Protobuf libraries must be compiled.  
+* The Tensorflow Object Detection API uses Protobufs to configure, model and training parameters. Before the framework can be used, the Protobuf libraries must be compiled.  
 
-This should be done by running the following commands from the ``tensorflow/models/research/`` directory:  
+* This should be done by running the following commands from the ``tensorflow/models/research/`` directory:  
 ``protoc object_detection/protos/*.proto --python_out=.``  
 
-The above command, creates ``.ipynb`` file for every ``.proto`` file in the ``protos`` directory in object detection folder  
+* The above command, creates ``.ipynb`` file for every ``.proto`` file in the ``protos`` directory in object detection folder  
 ``tensorflow/models/research/object detection/protos`` 
 
-Adding libraries to ``PYTHONPATH``  
+* Adding libraries to ``PYTHONPATH``  
 When running locally, the ``tensorflow/models/research/`` and slim directories should be appended to ``PYTHONPATH.``  
-
 This can be done by running the following from ``tensorflow/models/research/:`` directory  
 ``export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim``  
 
@@ -52,13 +56,13 @@ If you wish to avoid running this manually, you can add the above command as a n
 E.g. ``sudo nano ~/.bashrc`` and then add the above command at the end of the file.  
 
 #### Testing the installation: ####  
-Test whether you have correctly installed the Tensorflow Object Detection API by running the following command:  
+* Test whether you have correctly installed the Tensorflow Object Detection API by running the following command:  
 ``python3 object_detection/builders/model_builder_test.py``
 
-If the above command executes sucessfully, means you have installed TensorFlow Object Detection API sucessfully.  
+* If the above command executes sucessfully, means you have installed TensorFlow Object Detection API sucessfully.  
 
 #### OpenCV Installation ####
-I am using ``OpenCV`` for implementing the object detection in real-time, you need to install ``OpenCV`` also.  
-Refer the below link for installation  
+* I am using ``OpenCV`` for implementing the object detection in real-time, you need to install ``OpenCV`` also.  
+* Refer the below link for installation  
 [OpenCV Installation](https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)  
 
