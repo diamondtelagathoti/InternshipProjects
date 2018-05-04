@@ -24,7 +24,7 @@ For python 3:
 	sudo pip3 install -r dependencies.txt  
 ```
 Note: ```dependencies.txt``` file contains all the dependencies/packages in order to run TensorFlow.  
-* After installing the tensorflow 1.5.0, and all the dependencies, run the following command,  
+* After installing the TensorFlow 1.5.0, and all the dependencies, run the following command,  
 	``sudo apt-get install python3-tk (For installing tkinter library)``  
 
 * In python interpreter, run the following commands to check whether TensorFlow is installed sucessfully:  
@@ -33,9 +33,9 @@ import tensorflow as tf
 print(tf.__version__) #print the version of TensorFlow installed in your system.
 ```
 
-For more information on installtion of TensorFlow, refer the link:  
+For more information on installtion of TensorFlow, refer the below link:  
 [TensorFlow Installation](https://www.tensorflow.org/install/)  
-[TensorFlow Object Detection Installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
+[TensorFlow Object Detection API Installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
 
 #### OpenCV Installation: ####
 - - - -
