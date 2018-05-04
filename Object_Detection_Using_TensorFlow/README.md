@@ -1,12 +1,13 @@
 # Object Detection Using TensorFlow  
 This repository contains the works which I have done using TensorFlow Object Detection API. Before running the code, you need to first install tensorflow and all its dependecies.  
 
-### System Requirements ###
+### System Requirements: ###
 ``` 
    * Ubuntu 16.04 LTS or later  
+   * Intel Pentium Quad Core Processor  
    * Dependencies Installed  
 ```
-Note: My system doesn't have GPU.  
+Note: Above requirements is according to my system.  
 Below installation procedure is for CPU which has no GPU.  
 For installation of TensorFlow on GPU, refer [TensorFlow GPU Installation](https://www.tensorflow.org/install/)  
 
