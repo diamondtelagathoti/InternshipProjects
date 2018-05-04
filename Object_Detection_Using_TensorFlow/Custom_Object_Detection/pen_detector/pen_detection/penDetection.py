@@ -21,49 +21,26 @@ print(np.__version__)
 if tf.__version__ < '1.4.0':
   raise ImportError('Please upgrade your tensorflow installation to v1.4.0 or later!') # Mine is 1.5.0
 
-# ENV SETUP  ### CWH: remove matplot display and manually add paths to references
-
 # This is needed to display the images.
 #%matplotlib inline
 
 #This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
 
-
 # Object detection imports
-#from home.striker.Desktop.tensorflow_objectdetection_models.research.object_detection.utils import label_map_util    ### CWH: Add object_detection path
+
 from pen_detection.utils import label_map_util
 from pen_detection.utils import visualization_utils as vis_util ### CWH: used for visualization
 
 # Model Preparation
-
-# What model to download.
 MODEL_NAME = 'pen_detection_model_v1.0' # custom model trained to only detect pens
-# MODEL_FILE = MODEL_NAME + '.tar.gz'
-# DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
-
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
 PATH_TO_LABELS = os.path.join('training', 'pen_label_map.pbtxt') # Add object_detection path
 
-NUM_CLASSES = 1 # As I have customized API for only one class
-
-# The following code downloads a pre-trained model,later you can train it on your own.
-# You can train the pre-trained model on your own dataset if you wanted or you can continue to train the already pre-trained model.
-# It all depeds on what your goals are!
-# Its better to use a pre-trained model and train it as per your needs.
-# Download Model
-'''
-opener = urllib.request.URLopener()
-opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
-tar_file = tarfile.open(MODEL_FILE)
-for file in tar_file.getmembers():
-  file_name = os.path.basename(file.name)
-  if 'frozen_inference_graph.pb' in file_name:
-    tar_file.extract(file, os.getcwd())
-'''
+NUM_CLASSES = 1 # Trained the API for only one class
 
 # Load a (frozen) Tensorflow model into memory.
 detection_graph = tf.Graph()
@@ -87,11 +64,10 @@ def load_image_into_numpy_array(image):
       (im_height, im_width, 3)).astype(np.uint8)
 
 # Detection
-# For the sake of simplicity you can use less images, add those images in the test_images directory in research/object_detection/test_images 
-# If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
+# For the sake of simplicity you can use less images, add those images in the test_images directory 
+# If you want to test the code with your images, just add path to the images to the PATH_TO_TEST_IMAGES_DIR.
 
 PATH_TO_TEST_IMAGES_DIR = 'pen_test_images' # change this directory according to your needs.
-#PATH_TO_TEST_IMAGES_DIR = '/home/striker/Desktop/tensorflow_programs/tensorflow_objectdetection_models/research/object_detection/test_images'
 TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'pen{}.jpg'.format(i)) for i in range(1,14) ]
 
 # Size, in inches, of the output images.
