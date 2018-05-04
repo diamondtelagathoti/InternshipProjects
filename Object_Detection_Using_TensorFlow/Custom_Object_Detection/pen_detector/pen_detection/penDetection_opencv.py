@@ -23,9 +23,9 @@ cam = cv.VideoCapture(0) # Capturing the video feed from my WebCam, which is ass
 sys.path.append("..")
 
 # Object detection imports
-from object_detection.utils import label_map_util    ### CWH: Add object_detection path
+from object_detection.utils import label_map_util
 
-from object_detection.utils import visualization_utils as vis_util ### CWH: used for visualization
+from object_detection.utils import visualization_utils as vis_util
 
 # Model Preparation
 MODEL_NAME = 'pen_detection_model_v1.0'
@@ -64,7 +64,6 @@ with detection_graph.as_default():
                 image_tensor = detection_graph.get_tensor_by_name('image_tensor:0')
                 # Each box represents a part of the image where a particular object was detected.
                 detection_boxes = detection_graph.get_tensor_by_name('detection_boxes:0')
-                # print(type(detection_boxes))
                 # Each score represent how level of confidence for each of the objects.
                 # Score is shown on the result image, together with the class label.
                 detection_scores = detection_graph.get_tensor_by_name('detection_scores:0')
