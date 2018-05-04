@@ -30,9 +30,8 @@ Note: ```dependencies.txt``` file contains all the dependencies/packages in orde
 * In python interpreter, run the following commands to check whether TensorFlow is installed sucessfully:  
 ```
 import tensorflow as tf
-print(tf.__version__) #print the version of tensorflow installed in your system.
+print(tf.__version__) #print the version of TensorFlow installed in your system.
 ```
-After sucessfully installing tensorFlow, issue the following commmands to install TensorFlow Object Detection API  
 
 For more information on installtion of TensorFlow, refer the link:  
 [TensorFlow Installation](https://www.tensorflow.org/install/)  
