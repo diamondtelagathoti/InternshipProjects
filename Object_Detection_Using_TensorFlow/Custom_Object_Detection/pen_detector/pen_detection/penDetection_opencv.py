@@ -12,9 +12,7 @@ from matplotlib import pyplot as plt ### CWH
 from PIL import Image
 import cv2 as cv
 
-print('OpenCV Version: %s' % (cv.__version__))
-print('Tensorflow Version: %s' % (tf.__version__))
-print("Numpy Version: %s" % (np.__version__))
+print('OpenCV Version: %s\nTensorFlow Version: %s\nNumPy Version: %s' % (cv.__version__,tf.__version__,np.__version__))
 
 cam = cv.VideoCapture(0) # Capturing the video feed from my WebCam, which is assigned an index value of 0
 # scaling_factor = 0.5 # Image size scaling factor
@@ -23,9 +21,9 @@ cam = cv.VideoCapture(0) # Capturing the video feed from my WebCam, which is ass
 sys.path.append("..")
 
 # Object detection imports
-from object_detection.utils import label_map_util
+from pen_detection.utils import label_map_util
 
-from object_detection.utils import visualization_utils as vis_util
+from pen_detection.utils import visualization_utils as vis_util
 
 # Model Preparation
 MODEL_NAME = 'pen_detection_model_v1.0'
