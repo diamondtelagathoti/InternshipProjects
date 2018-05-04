@@ -1,9 +1,9 @@
 # Object Detection Using TensorFlow  
-
+- - - -
 This repository contains the works which I have done using TensorFlow Object Detection API. Before running the code, you need to first install tensorflow and all its dependecies.  
 
 ### Installation: ###
-
+- - - -
 ```System: Ubuntu 16.04 LTS or later```  
 
 ``pip`` is a python package manager used for installing all the modules, if ``pip`` is not installed, then run the following command before insalling dependencies:  
@@ -35,34 +35,13 @@ print(tf.__version__) #print the version of tensorflow installed in your system.
 ```
 After sucessfully installing tensorFlow, issue the following commmands to install TensorFlow Object Detection API  
 
-#### Protobuf Compilation: ####  
-* The Tensorflow Object Detection API uses Protobufs to configure, model and training parameters. Before the framework can be used, the Protobuf libraries must be compiled.  
-
-* This should be done by running the following commands from the ``tensorflow/models/research/`` directory:  
-``protoc object_detection/protos/*.proto --python_out=.``  
-
-* The above command, creates ``.ipynb`` file for every ``.proto`` file in the ``protos`` directory in object detection folder  
-``tensorflow/models/research/object detection/protos`` 
-
-* Adding libraries to ``PYTHONPATH``  
-When running locally, the ``tensorflow/models/research/`` and slim directories should be appended to ``PYTHONPATH.``  
-This can be done by running the following from ``tensorflow/models/research/:`` directory  
-``export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim``  
-
-Note: This command needs to run from every new terminal you start.  
-
-If you wish to avoid running this manually, you can add the above command as a new line to the end of your ~/.bashrc file.  
-E.g. ``sudo nano ~/.bashrc`` and then add the above command at the end of the file.  
-
-#### Testing the Installation: ####  
-* Test whether you have correctly installed the Tensorflow Object Detection API by running the following command:  
-``python3 object_detection/builders/model_builder_test.py``
-
-* If the above command executes sucessfully, means you have installed _TensorFlow Object Detection API sucessfully_.  
+For more information on installtion of TensorFlow, refer the link:  
+[TensorFlow Installation](https://www.tensorflow.org/install/)
+[TensorFlow Object Detection Installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
 
 #### OpenCV Installation: ####
+- - - -
 * I am using ``OpenCV`` for implementing the object detection in real-time, you need to install ``OpenCV`` also.  
 * Refer the below link for installation  
 [OpenCV Installation](https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)  
-- - - -
 
