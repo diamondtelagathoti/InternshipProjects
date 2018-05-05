@@ -3,9 +3,9 @@
 Developed a **REST Client** which extracts the Bug Report from the MySQL Database first and then log all the _Bug Reports_ with relevant stats (JSON Format) to specific JIRA Project using REST API provided by JIRA.  
 
 #### System Requirements:
-* Ubuntu 16.04 LTS or later  
-* Python 2.7 or 3  
-* JIRA and all the dependencies must be installed  
+* Ubuntu 16.04 LTS or later.   
+* Python 2.7 or 3.   
+* JIRA and all the dependencies must be installed.   
 
 #### Installation:
 
@@ -25,7 +25,7 @@ Open the terminal:
 	```
 If no error is reported by the interpreter, means JIRA is sucessfully installed.  
 
-#### Code Example:
+#### Execution of the Code:
 
 * After installing all the dependencies, supply the following command as the program has a command line interface.  
 	``python3 jira_rest_client.py -dbname databasename -hname hostname -u username -p password``  
