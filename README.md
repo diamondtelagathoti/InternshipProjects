@@ -1,5 +1,5 @@
 # Internship Projects  
-The repository contains all the inforamtion about all the projects, which I have done during my Internships.  
+The repository contains all the inforamtion about the projects, which I have done during my Internships.  
 
 #### Index:
 1. Object Detection Using TensorFlow Object Detection API.
