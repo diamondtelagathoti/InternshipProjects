@@ -21,6 +21,7 @@ Open the terminal:
 	python3    
 	from jira import JIRA
 	```
+If no error is reported by the interpreter, means JIRA is sucessfully installed.  
 
 #### Code Example:
 
