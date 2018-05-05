@@ -15,7 +15,7 @@ Developed a **REST Client** which extracts the Bug Report from the MySQL Databas
 	sudo apt-get install python3-pandas
 	```
 
-For more information on installing dependencies, refer the link:[JIRA Installation](https://jira.readthedocs.io/en/master/installation.html)  
+For more information on installing dependencies, refer the link: [JIRA Installation](https://jira.readthedocs.io/en/master/installation.html)  
 
 * To check whether JIRA is installed successfully or not:  
 Open the terminal:  
