@@ -27,10 +27,10 @@ If no error is reported by the interpreter, means JIRA is sucessfully installed.
 
 #### Execution of the Code:
 
-* After installing all the dependencies, supply the following command as the program has a command line interface.  
+* After sucessfull installtion, issue the following command in the terminal as the program has a command line interface.  
 	``python3 jira_rest_client.py -dbname databasename -hname hostname -u username -p password``  
 
-* There are 4 arguments which you must pass as a command line argument, which are:  
+* There are 4 arguments which you must pass (in any order) as a command line argument:  
 1. -dbname: Name of the database.  
 2. -hname: Hostname of the database.  
 3. -u: username of the database.  
