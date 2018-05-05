@@ -39,9 +39,9 @@ If no error is reported by the interpreter, means JIRA is sucessfully installed.
 ``E.g. python3 jira_rest_client.py -dbname localhost -hname 127.0.0.1 -u abcdef -p 12345678``  
 
 #### References:
-* For more information on _How The REST Client Works_, refer the link:  
+* For more information on **_How The REST Client Works_**, refer the link:  
 [How The REST Client Works](https://docs.google.com/document/d/1CHUcDlvIS7zXKYXRY1dFw2VWpx4xE4YB63O0jG0dfM8/edit?usp=sharing)  
 
-* For more information on _Python JIRA REST API_, refer the link:  
+* For more information on **_Python JIRA REST API_**, refer the link:  
 [Python JIRA REST API](https://jira.readthedocs.io/en/master/api.html)  
 
