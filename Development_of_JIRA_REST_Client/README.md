@@ -17,8 +17,10 @@ For more information on installing dependencies, refer the link:[JIRA Installati
 
 * To check whether JIRA is installed successfully or not:  
 Open the terminal:  
-	``python3``    
-	``from jira import JIRA``   
+	``` python
+	python3    
+	from jira import JIRA
+	```
 
 #### Code Example:
 
