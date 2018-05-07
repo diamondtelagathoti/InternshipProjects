@@ -12,28 +12,23 @@ from io import StringIO
 from matplotlib import pyplot as plt ### CWH
 from PIL import Image
 
-print('Tensorflow Version:') 
-print(tf.__version__)
-print('Numpy Version:') 
-print(np.__version__)
-#print(matplotlib.__version__)
-
+print('Tensorflow Version:%s\n Numpy Version: %s\n' %(tf.__version__,np.__version__)) 
 if tf.__version__ < '1.4.0':
   raise ImportError('Please upgrade your tensorflow installation to v1.4.0 or later!') # Mine is 1.5.0
 
 # This is needed to display the images.
-#%matplotlib inline
+# %matplotlib inline
 
-#This is needed since the notebook is stored in the object_detection folder.
+# This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
 
 # Object detection imports
 
 from pen_detection.utils import label_map_util
-from pen_detection.utils import visualization_utils as vis_util ### CWH: used for visualization
+from pen_detection.utils import visualization_utils as vis_util # used for visualization
 
 # Model Preparation
-MODEL_NAME = 'pen_detection_model_v1.0' # custom model trained to only detect pens
+MODEL_NAME = 'pen_detection_model_v1.0' # custom model trained to only detect pens.
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
@@ -103,7 +98,7 @@ with detection_graph.as_default():
       classes = np.squeeze(classes).astype(np.int32)
       scores = np.squeeze(scores)
       boxes = np.squeeze(boxes)     
-      threshold = 0.45  #CWH: set a minimum score threshold of 45%
+      threshold = 0.45  #set a minimum score threshold of 45%
       obj_above_thresh = sum(n > threshold for n in scores)
       print("detected %s objects in %s above a %s score" % ( obj_above_thresh, image_path, threshold))
       for c in range(0, len(classes)):
