@@ -39,12 +39,11 @@ Note: ```dependencies.txt``` file contains all the dependencies/packages in orde
 ```python
 import tensorflow as tf
 print(tf.__version__) #print the version of TensorFlow installed in your system.
-```
-
+```  
 For detailed information on installation of TensorFlow, refer the below link:  
 [TensorFlow Installation](https://www.tensorflow.org/install/)  
 [TensorFlow Object Detection API Installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)  
-Following the above link, will set up the required enviroment.  
+
 #### OpenCV Installation:
 * I am using ``OpenCV`` for implementing the object detection in real-time, you need to install ``OpenCV`` also.  
 * Refer the below link for installation  
